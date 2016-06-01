@@ -34,10 +34,10 @@ def brute(string, length, charset, tab):
 
 
 print charset_tab[0]
-for length in range(1, 8):
-    for charset in charset_tab:
-        c = threading.Thread(None, brute, None,('', length, charset, tab))
-        thread.append(c)
+#for length in range(1, 8):
+for charset in charset_tab:
+    c = threading.Thread(None, brute, None,('', length_max, charset, tab))
+    thread.append(c)
         
 for t in thread:
     print "tread "+str(t)
